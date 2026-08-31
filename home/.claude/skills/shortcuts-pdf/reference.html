@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Atajos de teclado</title>
+<style>
+  @page { size: A4; margin: 16mm 16mm; }
+  * { box-sizing: border-box; }
+  body {
+    font-family: -apple-system, "Helvetica Neue", Arial, sans-serif;
+    color: #1c1c1e;
+    font-size: 10.5pt;
+    line-height: 1.38;
+  }
+  h1 {
+    font-size: 19pt;
+    margin: 0 0 2pt 0;
+  }
+  .subtitle {
+    color: #6b6b70;
+    font-size: 9pt;
+    margin: 0 0 14pt 0;
+  }
+  h2 {
+    font-size: 13.5pt;
+    margin: 16pt 0 4pt 0;
+    padding-bottom: 3pt;
+    border-bottom: 1.5pt solid #1c1c1e;
+    break-after: avoid;
+  }
+  h3 {
+    font-size: 10pt;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    color: #6b6b70;
+    margin: 10pt 0 3pt 0;
+    break-after: avoid;
+  }
+  .cols {
+    display: flex;
+    gap: 18pt;
+  }
+  .cols > div { flex: 1; min-width: 0; }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 3pt;
+    break-inside: avoid;
+  }
+  td {
+    padding: 2.2pt 6pt;
+    vertical-align: top;
+    border-bottom: 0.5pt solid #e4e4e7;
+  }
+  td.key {
+    width: 38%;
+    white-space: nowrap;
+  }
+  kbd {
+    font-family: "SF Mono", Menlo, Consolas, monospace;
+    font-size: 9pt;
+    background: #f0f0f2;
+    border: 0.5pt solid #d4d4d8;
+    border-radius: 4pt;
+    padding: 1pt 4.5pt;
+  }
+  .note {
+    font-size: 8.5pt;
+    color: #6b6b70;
+    font-style: italic;
+    margin: 3pt 0 0 0;
+  }
+  .empty-note {
+    font-size: 9.5pt;
+    color: #6b6b70;
+    padding: 3pt 0;
+  }
+  .tag {
+    display: inline-block;
+    font-size: 7.5pt;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    color: #8b8b90;
+    border: 0.5pt solid #d4d4d8;
+    border-radius: 3pt;
+    padding: 0.5pt 4pt;
+    margin-left: 5pt;
+  }
+</style>
+</head>
+<body>
+
+<h1>Atajos de teclado</h1>
+<p class="subtitle">Generado el 31 de agosto de 2026 &middot; custom leído desde ~/.dotfiles, defaults verificados contra el código fuente instalado &middot; leader key de Neovim: <kbd>Espacio</kbd></p>
+
+<h2>Vim &mdash; lo básico<span class="tag">default de Neovim</span></h2>
+<div class="cols">
+<div>
+<h3>Modos y moverse</h3>
+<table>
+  <tr><td class="key"><kbd>i</kbd></td><td>Insertar antes del cursor</td></tr>
+  <tr><td class="key"><kbd>a</kbd></td><td>Insertar después del cursor</td></tr>
+  <tr><td class="key"><kbd>o</kbd> / <kbd>O</kbd></td><td>Nueva línea abajo / arriba, en modo insertar</td></tr>
+  <tr><td class="key"><kbd>Esc</kbd></td><td>Volver a modo normal (en esta config, también guarda)</td></tr>
+  <tr><td class="key"><kbd>h</kbd> <kbd>j</kbd> <kbd>k</kbd> <kbd>l</kbd></td><td>Izquierda / abajo / arriba / derecha</td></tr>
+  <tr><td class="key"><kbd>w</kbd> / <kbd>b</kbd></td><td>Palabra siguiente / anterior</td></tr>
+  <tr><td class="key"><kbd>0</kbd> / <kbd>$</kbd></td><td>Inicio / fin de la línea</td></tr>
+  <tr><td class="key"><kbd>gg</kbd> / <kbd>G</kbd></td><td>Principio / final del archivo</td></tr>
+  <tr><td class="key"><kbd>Ctrl</kbd>+<kbd>o</kbd></td><td>Volver a la posición anterior del cursor (jumplist)</td></tr>
+  <tr><td class="key"><kbd>Ctrl</kbd>+<kbd>i</kbd></td><td>Ir adelante en la jumplist</td></tr>
+</table>
+</div>
+<div>
+<h3>Seleccionar, borrar, copiar</h3>
+<table>
+  <tr><td class="key"><kbd>v</kbd></td><td>Selección visual por carácter</td></tr>
+  <tr><td class="key"><kbd>V</kbd></td><td>Selección visual por línea</td></tr>
+  <tr><td class="key"><kbd>Ctrl</kbd>+<kbd>v</kbd></td><td>Selección visual en bloque</td></tr>
+  <tr><td class="key"><kbd>Ctrl</kbd>+<kbd>a</kbd></td><td>Seleccionar todo el archivo (custom, keys.lua)</td></tr>
+  <tr><td class="key"><kbd>x</kbd></td><td>Borrar el carácter bajo el cursor</td></tr>
+  <tr><td class="key"><kbd>dd</kbd></td><td>Borrar la línea actual</td></tr>
+  <tr><td class="key"><kbd>dw</kbd></td><td>Borrar la palabra actual</td></tr>
+  <tr><td class="key"><kbd>d</kbd> + selección</td><td>Borrar la selección visual</td></tr>
+  <tr><td class="key"><kbd>yy</kbd></td><td>Copiar (yank) la línea actual</td></tr>
+  <tr><td class="key"><kbd>y</kbd> + selección</td><td>Copiar la selección visual</td></tr>
+  <tr><td class="key"><kbd>p</kbd> / <kbd>P</kbd></td><td>Pegar después / antes del cursor</td></tr>
+  <tr><td class="key"><kbd>u</kbd></td><td>Deshacer</td></tr>
+  <tr><td class="key"><kbd>Ctrl</kbd>+<kbd>r</kbd></td><td>Rehacer</td></tr>
+</table>
+</div>
+</div>
+<p class="note">Pegar (<kbd>p</kbd>) sobre una selección ya no pisa el clipboard con el texto reemplazado (fix custom en keys.lua).</p>
+
+<h2>Neovim &mdash; atajos propios y de plugins</h2>
+
+<h3>Atajos propios (keys.lua)</h3>
+<table>
+  <tr><td class="key"><kbd>Esc</kbd></td><td>Guardar el archivo</td></tr>
+  <tr><td class="key"><kbd>Ctrl</kbd>+<kbd>a</kbd></td><td>Seleccionar todo</td></tr>
+</table>
+
+<h3>oil.nvim &mdash; explorador de archivos <span class="tag">defaults del plugin</span></h3>
+<div class="cols">
+<div>
+<table>
+  <tr><td class="key"><kbd>Espacio</kbd> <kbd>e</kbd></td><td>Abrir el explorador (custom)</td></tr>
+  <tr><td class="key"><kbd>Enter</kbd></td><td>Abrir archivo / entrar al directorio</td></tr>
+  <tr><td class="key"><kbd>-</kbd></td><td>Subir al directorio padre (&laquo;volver atrás&raquo;)</td></tr>
+  <tr><td class="key"><kbd>_</kbd></td><td>Ir al directorio de trabajo actual</td></tr>
+  <tr><td class="key"><kbd>g.</kbd></td><td>Mostrar/ocultar archivos ocultos</td></tr>
+</table>
+</div>
+<div>
+<table>
+  <tr><td class="key"><kbd>Ctrl</kbd>+<kbd>p</kbd></td><td>Previsualizar archivo</td></tr>
+  <tr><td class="key"><kbd>Ctrl</kbd>+<kbd>s</kbd> / <kbd>Ctrl</kbd>+<kbd>h</kbd></td><td>Abrir en split vertical / horizontal</td></tr>
+  <tr><td class="key"><kbd>Ctrl</kbd>+<kbd>t</kbd></td><td>Abrir en una tab nueva</td></tr>
+  <tr><td class="key"><kbd>gs</kbd></td><td>Cambiar orden de la lista</td></tr>
+  <tr><td class="key"><kbd>g?</kbd></td><td>Ver ayuda completa</td></tr>
+</table>
+</div>
+</div>
+
+<h3>snacks.nvim &mdash; picker / buscador</h3>
+<table>
+  <tr><td class="key"><kbd>Espacio</kbd> <kbd>f</kbd></td><td>Buscar archivos</td></tr>
+  <tr><td class="key"><kbd>Espacio</kbd> <kbd>s</kbd></td><td>Buscar texto (grep)</td></tr>
+  <tr><td class="key"><kbd>Espacio</kbd> <kbd>b</kbd></td><td>Listar buffers</td></tr>
+  <tr><td class="key"><kbd>g</kbd> <kbd>d</kbd></td><td>Ir a la definición</td></tr>
+</table>
+
+<h3>neogit <span class="tag">defaults del plugin</span></h3>
+<p class="note" style="margin:0 0 4pt 0;">Abrir con <kbd>Espacio</kbd> <kbd>g</kbd> (custom). Dentro del status buffer:</p>
+<div class="cols">
+<div>
+<table>
+  <tr><td class="key"><kbd>j</kbd> / <kbd>k</kbd></td><td>Moverse abajo / arriba</td></tr>
+  <tr><td class="key"><kbd>Tab</kbd></td><td>Ver/ocultar el diff del ítem bajo el cursor</td></tr>
+  <tr><td class="key"><kbd>s</kbd></td><td>Stage (agregar al commit)</td></tr>
+  <tr><td class="key"><kbd>S</kbd></td><td>Stage de todo lo unstaged</td></tr>
+  <tr><td class="key"><kbd>u</kbd></td><td>Unstage</td></tr>
+  <tr><td class="key"><kbd>U</kbd></td><td>Unstage de todo lo staged</td></tr>
+  <tr><td class="key"><kbd>x</kbd></td><td>Descartar el cambio</td></tr>
+</table>
+</div>
+<div>
+<table>
+  <tr><td class="key"><kbd>Enter</kbd></td><td>Ir al archivo</td></tr>
+  <tr><td class="key"><kbd>c</kbd></td><td>Menú de commit</td></tr>
+  <tr><td class="key"><kbd>p</kbd></td><td>Menú de pull</td></tr>
+  <tr><td class="key"><kbd>P</kbd></td><td>Menú de push</td></tr>
+  <tr><td class="key"><kbd>l</kbd></td><td>Menú de log</td></tr>
+  <tr><td class="key"><kbd>d</kbd></td><td>Menú de diff</td></tr>
+  <tr><td class="key"><kbd>q</kbd></td><td>Cerrar Neogit</td></tr>
+</table>
+</div>
+</div>
+<p class="note">Los menús (<kbd>c</kbd>, <kbd>p</kbd>, <kbd>P</kbd>, etc.) abren un popup con más opciones específicas de esa acción.</p>
+
+<h3>gitsigns.nvim</h3>
+<p class="empty-note">Sin atajos propios declarados en la config actual (solo <code>current_line_blame</code> activado).</p>
+
+<h3>which-key.nvim</h3>
+<p class="empty-note">No agrega atajos propios: muestra un popup con los atajos disponibles al presionar el leader key.</p>
+
+<h2>herdr</h2>
+<p class="subtitle" style="margin-bottom:6pt;">Prefix: <kbd>Ctrl</kbd>+<kbd>b</kbd> &mdash; todos los binds de abajo se presionan después del prefix.</p>
+<div class="cols">
+<div>
+<table>
+  <tr><td class="key"><kbd>prefix</kbd> <kbd>h</kbd></td><td>Foco al pane de la izquierda</td></tr>
+  <tr><td class="key"><kbd>prefix</kbd> <kbd>j</kbd></td><td>Foco al pane de abajo</td></tr>
+  <tr><td class="key"><kbd>prefix</kbd> <kbd>k</kbd></td><td>Foco al pane de arriba</td></tr>
+  <tr><td class="key"><kbd>prefix</kbd> <kbd>l</kbd></td><td>Foco al pane de la derecha</td></tr>
+  <tr><td class="key"><kbd>prefix</kbd> <kbd>"</kbd></td><td>Split horizontal</td></tr>
+  <tr><td class="key"><kbd>prefix</kbd> <kbd>%</kbd></td><td>Split vertical</td></tr>
+</table>
+</div>
+<div>
+<table>
+  <tr><td class="key"><kbd>prefix</kbd> <kbd>c</kbd></td><td>Nueva tab</td></tr>
+  <tr><td class="key"><kbd>prefix</kbd> <kbd>&amp;</kbd></td><td>Cerrar tab</td></tr>
+  <tr><td class="key"><kbd>prefix</kbd> <kbd>w</kbd></td><td>Selector de workspaces</td></tr>
+  <tr><td class="key"><kbd>prefix</kbd> <kbd>g</kbd></td><td>Goto</td></tr>
+  <tr><td class="key"><kbd>prefix</kbd> <kbd>y</kbd></td><td>Entrar a copy-mode</td></tr>
+</table>
+</div>
+</div>
+<p class="note">Dentro de copy-mode: <kbd>v</kbd>/<kbd>Espacio</kbd> selecciona, <kbd>y</kbd>/<kbd>Enter</kbd> copia, <kbd>q</kbd>/<kbd>Esc</kbd> cancela &mdash; esas teclas internas no son configurables.</p>
+
+<h2>WezTerm</h2>
+<p class="empty-note">Sin overrides de teclado en <code>wezterm.lua</code>: usa los atajos por default de la aplicación (ver wezterm.org/config/default-keys.html).</p>
+
+</body>
+</html>

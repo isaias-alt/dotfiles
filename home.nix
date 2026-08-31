@@ -45,7 +45,7 @@ in
       pull = "git pull";
       main = "git switch main";
       develop = "git switch develop";
-      cc = "claude --dangerously-skip-permissions";
+      cc = "claude";
       ls = "eza";
       ll = "eza -la";
       la = "eza -a";
@@ -75,4 +75,15 @@ in
 
   home.file.".config/wezterm".source =
     config.lib.file.mkOutOfStoreSymlink "${dotfiles}/home/.config/wezterm";
+  home.file.".config/nvim".source =
+    config.lib.file.mkOutOfStoreSymlink "${dotfiles}/home/.config/nvim";
+  home.file.".config/herdr".source =
+    config.lib.file.mkOutOfStoreSymlink "${dotfiles}/home/.config/herdr";
+  home.file.".claude/settings.json".source =
+    config.lib.file.mkOutOfStoreSymlink "${dotfiles}/home/.claude/settings.json";
+  home.file.".claude/CLAUDE.md".source =
+    config.lib.file.mkOutOfStoreSymlink "${dotfiles}/home/AGENTS.md";
+  home.file.".claude/skills".source =
+    config.lib.file.mkOutOfStoreSymlink "${dotfiles}/home/.claude/skills";
+
 }
