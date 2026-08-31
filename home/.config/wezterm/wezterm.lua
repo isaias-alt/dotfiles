@@ -72,6 +72,11 @@ wezterm.on("gui-startup", function(cmd)
 		f:close()
 		if ok and gui_window and size and size.width and size.height then
 			gui_window:set_inner_size(size.width, size.height)
+			local screen = wezterm.gui.screens().main
+			gui_window:set_position(
+				screen.x + (screen.width - size.width) / 2,
+				screen.y + (screen.height - size.height) / 2
+			)
 		end
 	end
 end)
