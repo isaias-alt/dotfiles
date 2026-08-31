@@ -4,7 +4,7 @@ local config = wezterm.config_builder()
 
 config.color_scheme = "rose-pine-moon"
 config.font = wezterm.font("Hack Nerd Font")
-config.font_size = 15.0
+config.font_size = 17.0
 config.window_background_opacity = 0.8
 config.macos_window_background_blur = 50
 config.hide_tab_bar_if_only_one_tab = true
@@ -42,6 +42,38 @@ wezterm.on("window-focus-changed", function(window)
 	overrides.foreground_text_hsb = text_hsb
 	overrides.window_background_opacity = opacity
 	window:set_config_overrides(overrides)
+end)
+
+-- Remember window size across restarts (WezTerm doesn't do this natively):
+-- save pixel size on every resize, restore it when a new GUI window spawns.
+local mux = wezterm.mux
+local SIZE_STATE_DIR = wezterm.home_dir .. "/.local/state/wezterm"
+local SIZE_STATE_PATH = SIZE_STATE_DIR .. "/size.json"
+
+wezterm.on("window-resized", function(window, pane)
+	local dims = window:get_dimensions()
+	if dims.is_full_screen then
+		return
+	end
+	os.execute("mkdir -p " .. SIZE_STATE_DIR)
+	local f = io.open(SIZE_STATE_PATH, "w")
+	if f then
+		f:write(wezterm.json_encode({ width = dims.pixel_width, height = dims.pixel_height }))
+		f:close()
+	end
+end)
+
+wezterm.on("gui-startup", function(cmd)
+	local _, _, window = mux.spawn_window(cmd or {})
+	local gui_window = window:gui_window()
+	local f = io.open(SIZE_STATE_PATH, "r")
+	if f then
+		local ok, size = pcall(wezterm.json_parse, f:read("*a"))
+		f:close()
+		if ok and gui_window and size and size.width and size.height then
+			gui_window:set_inner_size(size.width, size.height)
+		end
+	end
 end)
 
 return config
