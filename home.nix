@@ -23,6 +23,7 @@ in
 
   fonts.fontconfig.enable = true;
   home.sessionVariables.EDITOR = "nvim";
+  home.sessionPath = [ "${config.home.homeDirectory}/flutter/bin" ];
 
   programs.zoxide.enable = true;
 
