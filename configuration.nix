@@ -7,6 +7,6 @@
   nixpkgs.config.allowUnfree = true;
   nixpkgs.hostPlatform = "aarch64-darwin";
 
-  system.primaryUser = "lucascodev";
+  system.primaryUser = "macuser";
   system.stateVersion = 6;
 }
