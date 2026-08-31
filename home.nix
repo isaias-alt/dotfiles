@@ -24,7 +24,6 @@ in
   fonts.fontconfig.enable = true;
   home.sessionVariables.EDITOR = "nvim";
 
-  programs.fnm.enable = true;
   programs.zoxide.enable = true;
 
   programs.zsh = {
@@ -36,6 +35,7 @@ in
     syntaxHighlighting.enable = true;  # commands turn green when valid
     initContent = ''
       bindkey '^f' autosuggest-accept
+      eval "$(fnm env)"
     '';
     shellAliases = {
       ".." = "cd ..";
