@@ -1,4 +1,11 @@
 onboarding = false
+
+[theme]
+# Follow WezTerm's active color_scheme instead of a fixed built-in theme,
+# so herdr's own chrome (status bar, borders, tabs) matches whatever we're
+# auditioning in wezterm.lua.
+name = "terminal"
+
 [keys]
 prefix = "ctrl+b"
 focus_pane_left  = "prefix+h"

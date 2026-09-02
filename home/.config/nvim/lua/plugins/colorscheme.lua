@@ -1,8 +1,41 @@
 return {
   {
-    'rose-pine/neovim',
+    'sainnhe/sonokai',
     lazy = false,
     priority = 1000,
+    config = function()
+      vim.g.sonokai_style = 'default'
+      vim.cmd.colorscheme('sonokai')
+    end,
+  },
+  {
+    'craftzdog/solarized-osaka.nvim',
+    lazy = true,
+    config = function()
+      require('solarized-osaka').setup({})
+    end,
+  },
+  {
+    'folke/tokyonight.nvim',
+    lazy = true,
+    config = function()
+      require('tokyonight').setup({
+        style = 'night',
+      })
+    end,
+  },
+  {
+    'olimorris/onedarkpro.nvim',
+    lazy = true,
+    config = function()
+      require('onedarkpro').setup({
+        theme = 'onedark_dark',
+      })
+    end,
+  },
+  {
+    'rose-pine/neovim',
+    lazy = true,
     name = 'rose-pine',
     config = function()
       require('rose-pine').setup({
@@ -13,8 +46,6 @@ return {
           italic = false,
         },
       })
-
-      vim.cmd('colorscheme rose-pine')
 
       -- Make the dimmed directory path in the Snacks picker readable
       local palette = require('rose-pine.palette')
