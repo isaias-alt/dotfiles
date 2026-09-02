@@ -1,8 +1,15 @@
 return {
   {
-    'sainnhe/sonokai',
+    'isaias-alt/atom-one.nvim',
     lazy = false,
     priority = 1000,
+    config = function()
+      vim.cmd.colorscheme('atom-one-darker')
+    end,
+  },
+  {
+    'sainnhe/sonokai',
+    lazy = true,
     config = function()
       vim.g.sonokai_style = 'default'
       vim.cmd.colorscheme('sonokai')

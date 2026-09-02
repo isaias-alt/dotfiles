@@ -1,0 +1,14 @@
+[metadata]
+name = "Atom One Darker"
+origin_url = "https://github.com/isaias-alt/atom-one.nvim"
+
+[colors]
+foreground = "#abb2bf"
+background = "#23272e"
+cursor_bg = "#528bff"
+cursor_fg = "#23272e"
+cursor_border = "#528bff"
+selection_fg = "#abb2bf"
+selection_bg = "#3d4555"
+ansi = ["#3f4451", "#e05561", "#8cc265", "#d18f52", "#4aa5f0", "#c162de", "#42b3c2", "#d7dae0"]
+brights = ["#4f5666", "#ff616e", "#a5e075", "#f0a45d", "#4dc4ff", "#de73ff", "#4cd1e0", "#e6e6e6"]

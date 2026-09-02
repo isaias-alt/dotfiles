@@ -2,11 +2,17 @@ local wezterm = require("wezterm")
 
 local config = wezterm.config_builder()
 
-config.color_scheme = "Sonokai (Gogh)"
+config.color_scheme = "Atom One Darker"
 config.font = wezterm.font("Hack Nerd Font")
 config.font_size = 16.0
-config.window_background_opacity = 0.8
-config.macos_window_background_blur = 50
+config.window_background_opacity = 0.9
+-- Without this, apps that paint an explicit cell background (nvim, herdr)
+-- render fully opaque regardless of window_background_opacity above. Kept
+-- above 0 (unlike the commonly suggested 0.0) because WezTerm can't tell
+-- an app's base background apart from a semantic highlight (e.g. herdr's
+-- selected-tab color) - at 0.0 both vanish equally.
+config.text_background_opacity = 0.6
+config.macos_window_background_blur = 60
 config.hide_tab_bar_if_only_one_tab = true
 config.window_decorations = "RESIZE"
 
