@@ -3,6 +3,7 @@ return {
     'isaias-alt/atom-one.nvim',
     lazy = false,
     priority = 1000,
+    dependencies = { 'folke/tokyonight.nvim' },
     config = function()
       vim.cmd.colorscheme('atom-one-night-flat')
     end,

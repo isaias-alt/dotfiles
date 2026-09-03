@@ -2,7 +2,7 @@ local wezterm = require("wezterm")
 
 local config = wezterm.config_builder()
 
-config.color_scheme = "Atom One Darker"
+config.color_scheme = "Atom One Night Flat"
 config.font = wezterm.font("Hack Nerd Font")
 config.font_size = 16.0
 config.window_background_opacity = 0.9

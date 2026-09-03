@@ -1,8 +1,9 @@
 return {
   {
-    'NeogitOrg/neogit',
-    dependencies = { 'nvim-lua/plenary.nvim', 'sindrets/diffview.nvim' },
-    keys = { { '<leader>g', function() require('neogit').open() end, desc = 'Neogit' } },
+    'kdheepak/lazygit.nvim',
+    dependencies = { 'nvim-lua/plenary.nvim' },
+    cmd = 'LazyGit',
+    keys = { { '<leader>g', '<cmd>LazyGit<cr>', desc = 'LazyGit' } },
   },
   {
     'lewis6991/gitsigns.nvim',
