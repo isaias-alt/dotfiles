@@ -4,7 +4,7 @@ return {
     lazy = false,
     priority = 1000,
     config = function()
-      vim.cmd.colorscheme('atom-one-darker')
+      vim.cmd.colorscheme('atom-one-night-flat')
     end,
   },
   {
