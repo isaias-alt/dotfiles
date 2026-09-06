@@ -65,11 +65,15 @@ in
     settings = {
       add_newline = false;
       format = "$directory$git_branch$git_status$cmd_duration$line_break$character";
+      # Colors match the atom-one-night-flat palette (same theme as nvim/wezterm/herdr).
+      directory.style = "bold #4aa5f0";
+      git_branch.style = "bold #c162de";
+      git_status.style = "#d18f52";
       character = {
-        success_symbol = "[❯](purple)";
-        error_symbol = "[❯](red)";
+        success_symbol = "[❯](bold #8cc265)";
+        error_symbol = "[❯](bold #e05561)";
       };
-      cmd_duration.format = "[$duration]($style) ";
+      cmd_duration.format = "[$duration](#d18f52) ";
     };
   };
 
