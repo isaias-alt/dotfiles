@@ -15,8 +15,8 @@ in
     eza # better ls
     fzf # fuzzy finder
     jq # json on the command line
-    lazygit
     neovim
+    delta # side-by-side diffs for lazygit
     # the font everything renders in
     nerd-fonts.jetbrains-mono
   ];
@@ -26,6 +26,16 @@ in
   home.sessionPath = [ "${config.home.homeDirectory}/flutter/bin" ];
 
   programs.zoxide.enable = true;
+
+  programs.lazygit = {
+    enable = true;
+    settings = {
+      gui.sidePanelWidth = 0.2; # more room for the side-by-side diff
+      git.pagers = [
+        { colorArg = "never"; pager = "delta --side-by-side --dark --paging=never"; }
+      ];
+    };
+  };
 
   programs.zsh = {
     enable = true;
