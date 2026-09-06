@@ -3,7 +3,7 @@ name = "Atom One Night Flat"
 origin_url = "https://github.com/isaias-alt/atom-one.nvim"
 
 [colors]
-foreground = "#abb2bf"
+foreground = "#e6e6e6"
 background = "#16191d"
 cursor_bg = "#528bff"
 cursor_fg = "#16191d"

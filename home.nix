@@ -18,7 +18,7 @@ in
     lazygit
     neovim
     # the font everything renders in
-    nerd-fonts.hack
+    nerd-fonts.jetbrains-mono
   ];
 
   fonts.fontconfig.enable = true;
@@ -89,5 +89,7 @@ in
     config.lib.file.mkOutOfStoreSymlink "${dotfiles}/home/AGENTS.md";
   home.file.".claude/skills".source =
     config.lib.file.mkOutOfStoreSymlink "${dotfiles}/home/.claude/skills";
+  home.file.".claude/themes".source =
+    config.lib.file.mkOutOfStoreSymlink "${dotfiles}/home/.claude/themes";
 
 }

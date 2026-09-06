@@ -3,20 +3,15 @@ local wezterm = require("wezterm")
 local config = wezterm.config_builder()
 
 config.color_scheme = "Atom One Night Flat"
-config.font = wezterm.font("Hack Nerd Font")
+config.font = wezterm.font("JetBrainsMono Nerd Font")
 config.font_size = 16.0
 config.window_background_opacity = 0.9
--- Without this, apps that paint an explicit cell background (nvim, herdr,
--- prompt segments) render fully opaque regardless of window_background_opacity
--- above. This value compounds with window_background_opacity (effective
--- opacity for a full cell-background paint is text + (1-text)*window), so
--- anything above 0 makes nvim's pane visibly more opaque than the rest of
--- the terminal. At 0.0 nvim matches exactly, but every app-painted
--- background (herdr's selected-tab highlight, prompt segment backgrounds)
--- also vanishes, leaving their foreground text floating on raw transparency
--- with harsher contrast. Kept low (not 0) as a middle ground: nvim's
--- mismatch stays faint, and other apps keep a sliver of background.
-config.text_background_opacity = 0.08
+-- text_background_opacity intentionally left unset (defaults to 1.0/opaque):
+-- herdr's tabs and other app-painted backgrounds need full opacity to read
+-- well. This used to double-blend with nvim's own painted background into a
+-- visible opacity mismatch (TODO item 1) - fixed at the source instead, in
+-- nvim's colorscheme config (Normal/SignColumn/etc set to bg=none), so nvim
+-- no longer paints an explicit background for this to compound with.
 config.macos_window_background_blur = 60
 config.hide_tab_bar_if_only_one_tab = true
 config.window_decorations = "RESIZE"

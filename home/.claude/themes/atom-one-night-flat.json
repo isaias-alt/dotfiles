@@ -1,0 +1,8 @@
+{
+  "name": "Atom One Night Flat",
+  "base": "dark",
+  "overrides": {
+    "userMessageBackground": "#16191d",
+    "suggestion": "#7f848e"
+  }
+}
