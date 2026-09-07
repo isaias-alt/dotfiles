@@ -91,7 +91,7 @@
 <body>
 
 <h1>Atajos de teclado</h1>
-<p class="subtitle">Generado el 31 de agosto de 2026 &middot; custom leído desde ~/.dotfiles, defaults verificados contra el código fuente instalado &middot; leader key de Neovim: <kbd>Espacio</kbd></p>
+<p class="subtitle">Generado el 6 de septiembre de 2026 &middot; custom leído desde ~/.dotfiles, defaults verificados contra el código fuente instalado &middot; leader key de Neovim: <kbd>Espacio</kbd></p>
 
 <h2>Vim &mdash; lo básico<span class="tag">default de Neovim</span></h2>
 <div class="cols">
@@ -101,7 +101,7 @@
   <tr><td class="key"><kbd>i</kbd></td><td>Insertar antes del cursor</td></tr>
   <tr><td class="key"><kbd>a</kbd></td><td>Insertar después del cursor</td></tr>
   <tr><td class="key"><kbd>o</kbd> / <kbd>O</kbd></td><td>Nueva línea abajo / arriba, en modo insertar</td></tr>
-  <tr><td class="key"><kbd>Esc</kbd></td><td>Volver a modo normal (en esta config, también guarda)</td></tr>
+  <tr><td class="key"><kbd>Esc</kbd></td><td>Volver a modo normal</td></tr>
   <tr><td class="key"><kbd>h</kbd> <kbd>j</kbd> <kbd>k</kbd> <kbd>l</kbd></td><td>Izquierda / abajo / arriba / derecha</td></tr>
   <tr><td class="key"><kbd>w</kbd> / <kbd>b</kbd></td><td>Palabra siguiente / anterior</td></tr>
   <tr><td class="key"><kbd>0</kbd> / <kbd>$</kbd></td><td>Inicio / fin de la línea</td></tr>
@@ -135,31 +135,8 @@
 
 <h3>Atajos propios (keys.lua)</h3>
 <table>
-  <tr><td class="key"><kbd>Esc</kbd></td><td>Guardar el archivo</td></tr>
   <tr><td class="key"><kbd>Ctrl</kbd>+<kbd>a</kbd></td><td>Seleccionar todo</td></tr>
 </table>
-
-<h3>oil.nvim &mdash; explorador de archivos <span class="tag">defaults del plugin</span></h3>
-<div class="cols">
-<div>
-<table>
-  <tr><td class="key"><kbd>Espacio</kbd> <kbd>e</kbd></td><td>Abrir el explorador (custom)</td></tr>
-  <tr><td class="key"><kbd>Enter</kbd></td><td>Abrir archivo / entrar al directorio</td></tr>
-  <tr><td class="key"><kbd>-</kbd></td><td>Subir al directorio padre (&laquo;volver atrás&raquo;)</td></tr>
-  <tr><td class="key"><kbd>_</kbd></td><td>Ir al directorio de trabajo actual</td></tr>
-  <tr><td class="key"><kbd>g.</kbd></td><td>Mostrar/ocultar archivos ocultos</td></tr>
-</table>
-</div>
-<div>
-<table>
-  <tr><td class="key"><kbd>Ctrl</kbd>+<kbd>p</kbd></td><td>Previsualizar archivo</td></tr>
-  <tr><td class="key"><kbd>Ctrl</kbd>+<kbd>s</kbd> / <kbd>Ctrl</kbd>+<kbd>h</kbd></td><td>Abrir en split vertical / horizontal</td></tr>
-  <tr><td class="key"><kbd>Ctrl</kbd>+<kbd>t</kbd></td><td>Abrir en una tab nueva</td></tr>
-  <tr><td class="key"><kbd>gs</kbd></td><td>Cambiar orden de la lista</td></tr>
-  <tr><td class="key"><kbd>g?</kbd></td><td>Ver ayuda completa</td></tr>
-</table>
-</div>
-</div>
 
 <h3>snacks.nvim &mdash; picker / buscador</h3>
 <table>
@@ -169,33 +146,40 @@
   <tr><td class="key"><kbd>g</kbd> <kbd>d</kbd></td><td>Ir a la definición</td></tr>
 </table>
 
-<h3>neogit <span class="tag">defaults del plugin</span></h3>
-<p class="note" style="margin:0 0 4pt 0;">Abrir con <kbd>Espacio</kbd> <kbd>g</kbd> (custom). Dentro del status buffer:</p>
+<h3>telescope-file-browser.nvim &mdash; explorador de archivos <span class="tag">defaults del plugin</span></h3>
+<p class="note" style="margin:0 0 4pt 0;">Abrir con <kbd>Espacio</kbd> <kbd>e</kbd> (custom) &mdash; arranca directo en modo normal. Un solo modo abajo: letra sola en normal, <kbd>Alt</kbd>+letra si estás escribiendo en el prompt (insert).</p>
 <div class="cols">
 <div>
 <table>
-  <tr><td class="key"><kbd>j</kbd> / <kbd>k</kbd></td><td>Moverse abajo / arriba</td></tr>
-  <tr><td class="key"><kbd>Tab</kbd></td><td>Ver/ocultar el diff del ítem bajo el cursor</td></tr>
-  <tr><td class="key"><kbd>s</kbd></td><td>Stage (agregar al commit)</td></tr>
-  <tr><td class="key"><kbd>S</kbd></td><td>Stage de todo lo unstaged</td></tr>
-  <tr><td class="key"><kbd>u</kbd></td><td>Unstage</td></tr>
-  <tr><td class="key"><kbd>U</kbd></td><td>Unstage de todo lo staged</td></tr>
-  <tr><td class="key"><kbd>x</kbd></td><td>Descartar el cambio</td></tr>
+  <tr><td class="key"><kbd>c</kbd> / <kbd>Alt</kbd>+<kbd>c</kbd></td><td>Crear archivo/carpeta (terminar en <kbd>/</kbd> = carpeta)</td></tr>
+  <tr><td class="key"><kbd>Shift</kbd>+<kbd>Enter</kbd></td><td>Crear y abrir desde el prompt</td></tr>
+  <tr><td class="key"><kbd>r</kbd> / <kbd>Alt</kbd>+<kbd>r</kbd></td><td>Renombrar seleccionado(s)</td></tr>
+  <tr><td class="key"><kbd>m</kbd> / <kbd>Alt</kbd>+<kbd>m</kbd></td><td>Mover seleccionado(s) al directorio actual</td></tr>
+  <tr><td class="key"><kbd>y</kbd> / <kbd>Alt</kbd>+<kbd>y</kbd></td><td>Copiar seleccionado(s) al directorio actual</td></tr>
+  <tr><td class="key"><kbd>d</kbd> / <kbd>Alt</kbd>+<kbd>d</kbd></td><td>Borrar seleccionado(s)</td></tr>
+  <tr><td class="key"><kbd>Tab</kbd> / <kbd>Shift</kbd>+<kbd>Tab</kbd></td><td>Marcar selección y pasar al siguiente/anterior</td></tr>
 </table>
 </div>
 <div>
 <table>
-  <tr><td class="key"><kbd>Enter</kbd></td><td>Ir al archivo</td></tr>
-  <tr><td class="key"><kbd>c</kbd></td><td>Menú de commit</td></tr>
-  <tr><td class="key"><kbd>p</kbd></td><td>Menú de pull</td></tr>
-  <tr><td class="key"><kbd>P</kbd></td><td>Menú de push</td></tr>
-  <tr><td class="key"><kbd>l</kbd></td><td>Menú de log</td></tr>
-  <tr><td class="key"><kbd>d</kbd></td><td>Menú de diff</td></tr>
-  <tr><td class="key"><kbd>q</kbd></td><td>Cerrar Neogit</td></tr>
+  <tr><td class="key"><kbd>o</kbd> / <kbd>Ctrl</kbd>+<kbd>o</kbd></td><td>Abrir con la app del sistema</td></tr>
+  <tr><td class="key"><kbd>g</kbd> / <kbd>Ctrl</kbd>+<kbd>g</kbd></td><td>Ir al directorio padre</td></tr>
+  <tr><td class="key"><kbd>e</kbd> / <kbd>Ctrl</kbd>+<kbd>e</kbd></td><td>Ir al home</td></tr>
+  <tr><td class="key"><kbd>w</kbd> / <kbd>Ctrl</kbd>+<kbd>w</kbd></td><td>Ir al cwd de nvim</td></tr>
+  <tr><td class="key"><kbd>t</kbd> / <kbd>Ctrl</kbd>+<kbd>t</kbd></td><td>Cambiar el cwd de nvim al seleccionado</td></tr>
+  <tr><td class="key"><kbd>f</kbd> / <kbd>Ctrl</kbd>+<kbd>f</kbd></td><td>Alternar explorador de archivos/carpetas</td></tr>
+  <tr><td class="key"><kbd>h</kbd> / <kbd>Ctrl</kbd>+<kbd>h</kbd></td><td>Mostrar/ocultar ocultos</td></tr>
+  <tr><td class="key"><kbd>s</kbd> / <kbd>Ctrl</kbd>+<kbd>s</kbd></td><td>Seleccionar/deseleccionar todo</td></tr>
+  <tr><td class="key"><kbd>Backspace</kbd></td><td>Con el prompt vacío, sube al directorio padre</td></tr>
 </table>
 </div>
 </div>
-<p class="note">Los menús (<kbd>c</kbd>, <kbd>p</kbd>, <kbd>P</kbd>, etc.) abren un popup con más opciones específicas de esa acción.</p>
+
+<h3>lazygit.nvim</h3>
+<table>
+  <tr><td class="key"><kbd>Espacio</kbd> <kbd>g</kbd></td><td>Abrir LazyGit (custom)</td></tr>
+</table>
+<p class="empty-note">Los atajos dentro de LazyGit son propios de esa TUI, no de nvim &mdash; <kbd>?</kbd> muestra su ayuda completa una vez abierto.</p>
 
 <h3>gitsigns.nvim</h3>
 <p class="empty-note">Sin atajos propios declarados en la config actual (solo <code>current_line_blame</code> activado).</p>
