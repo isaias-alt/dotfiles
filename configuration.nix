@@ -56,6 +56,7 @@
       "zoxide"
       "zsh-autosuggestions"
       "zsh-syntax-highlighting"
+      "unar"
     ];
     casks = [
       "wezterm"
