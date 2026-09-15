@@ -91,7 +91,7 @@
 <body>
 
 <h1>Atajos de teclado</h1>
-<p class="subtitle">Generado el 6 de septiembre de 2026 &middot; custom leído desde ~/.dotfiles, defaults verificados contra el código fuente instalado &middot; leader key de Neovim: <kbd>Espacio</kbd></p>
+<p class="subtitle">Generado el 14 de septiembre de 2026 &middot; custom leído desde ~/.dotfiles, defaults verificados contra el código fuente instalado &middot; leader key de Neovim: <kbd>Espacio</kbd></p>
 
 <h2>Vim &mdash; lo básico<span class="tag">default de Neovim</span></h2>
 <div class="cols">
@@ -191,26 +191,40 @@
 <p class="subtitle" style="margin-bottom:6pt;">Prefix: <kbd>Ctrl</kbd>+<kbd>b</kbd> &mdash; todos los binds de abajo se presionan después del prefix.</p>
 <div class="cols">
 <div>
+<h3>Panes</h3>
 <table>
   <tr><td class="key"><kbd>prefix</kbd> <kbd>h</kbd></td><td>Foco al pane de la izquierda</td></tr>
   <tr><td class="key"><kbd>prefix</kbd> <kbd>j</kbd></td><td>Foco al pane de abajo</td></tr>
   <tr><td class="key"><kbd>prefix</kbd> <kbd>k</kbd></td><td>Foco al pane de arriba</td></tr>
   <tr><td class="key"><kbd>prefix</kbd> <kbd>l</kbd></td><td>Foco al pane de la derecha</td></tr>
-  <tr><td class="key"><kbd>prefix</kbd> <kbd>"</kbd></td><td>Split horizontal</td></tr>
-  <tr><td class="key"><kbd>prefix</kbd> <kbd>%</kbd></td><td>Split vertical</td></tr>
+  <tr><td class="key"><kbd>prefix</kbd> <kbd>-</kbd></td><td>Split horizontal</td></tr>
+  <tr><td class="key"><kbd>prefix</kbd> <kbd>v</kbd></td><td>Split vertical</td></tr>
+</table>
+<h3>Agentes</h3>
+<table>
+  <tr><td class="key"><kbd>prefix</kbd> <kbd>,</kbd></td><td>Agente anterior</td></tr>
+  <tr><td class="key"><kbd>prefix</kbd> <kbd>.</kbd></td><td>Agente siguiente</td></tr>
 </table>
 </div>
 <div>
+<h3>Tabs y workspaces</h3>
 <table>
   <tr><td class="key"><kbd>prefix</kbd> <kbd>c</kbd></td><td>Nueva tab</td></tr>
-  <tr><td class="key"><kbd>prefix</kbd> <kbd>&amp;</kbd></td><td>Cerrar tab</td></tr>
+  <tr><td class="key"><kbd>prefix</kbd> <kbd>Shift</kbd>+<kbd>X</kbd></td><td>Cerrar tab</td></tr>
   <tr><td class="key"><kbd>prefix</kbd> <kbd>w</kbd></td><td>Selector de workspaces</td></tr>
-  <tr><td class="key"><kbd>prefix</kbd> <kbd>g</kbd></td><td>Goto</td></tr>
+  <tr><td class="key"><kbd>prefix</kbd> <kbd>[</kbd></td><td>Workspace anterior</td></tr>
+  <tr><td class="key"><kbd>prefix</kbd> <kbd>]</kbd></td><td>Workspace siguiente</td></tr>
+  <tr><td class="key"><kbd>prefix</kbd> <kbd>Shift</kbd>+<kbd>D</kbd></td><td>Cerrar workspace</td></tr>
+</table>
+<h3>Otros</h3>
+<table>
+  <tr><td class="key"><kbd>prefix</kbd> <kbd>g</kbd></td><td>Goto (navegador de sesiones)</td></tr>
   <tr><td class="key"><kbd>prefix</kbd> <kbd>y</kbd></td><td>Entrar a copy-mode</td></tr>
 </table>
 </div>
 </div>
 <p class="note">Dentro de copy-mode: <kbd>v</kbd>/<kbd>Espacio</kbd> selecciona, <kbd>y</kbd>/<kbd>Enter</kbd> copia, <kbd>q</kbd>/<kbd>Esc</kbd> cancela &mdash; esas teclas internas no son configurables.</p>
+<p class="note">Split y navegación de agentes usan símbolos sueltos sin Shift (<kbd>-</kbd>/<kbd>v</kbd>/<kbd>[</kbd>/<kbd>]</kbd>/<kbd>,</kbd>/<kbd>.</kbd>): combinaciones Shift+símbolo (ej. <kbd>Shift</kbd>+<kbd>[</kbd>) no se transmiten de forma confiable sin protocolo de teclado moderno (kitty/CSI-u), que WezTerm no tiene habilitado acá.</p>
 
 <h2>WezTerm</h2>
 <p class="empty-note">Sin overrides de teclado en <code>wezterm.lua</code>: usa los atajos por default de la aplicación (ver wezterm.org/config/default-keys.html).</p>
