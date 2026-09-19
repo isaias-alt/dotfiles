@@ -16,6 +16,7 @@ in
     fzf # fuzzy finder
     jq # json on the command line
     neovim
+    go # official Go toolchain
     delta # side-by-side diffs for lazygit
     # the font everything renders in
     nerd-fonts.jetbrains-mono
