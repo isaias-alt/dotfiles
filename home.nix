@@ -101,5 +101,9 @@ in
     config.lib.file.mkOutOfStoreSymlink "${dotfiles}/home/.claude/skills";
   home.file.".claude/themes".source =
     config.lib.file.mkOutOfStoreSymlink "${dotfiles}/home/.claude/themes";
+  home.file.".pi/agent/extensions".source =
+    config.lib.file.mkOutOfStoreSymlink "${dotfiles}/home/.pi/agent/extensions";
+  home.file.".pi/agent/AGENTS.md".source =
+    config.lib.file.mkOutOfStoreSymlink "${dotfiles}/home/.pi/agent/AGENTS.md";
 
 }
