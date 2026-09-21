@@ -46,6 +46,7 @@
       "fnm"
       "gh"
       "git"
+      "goreleaser"
       "node"
       "pnpm"
       "postgresql@14"

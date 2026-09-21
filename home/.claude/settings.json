@@ -33,5 +33,9 @@
   "tui": "fullscreen",
   "skipDangerousModePermissionPrompt": true,
   "theme": "custom:atom-one-night-flat",
-  "agentPushNotifEnabled": true
+  "agentPushNotifEnabled": true,
+  "feedbackDrafts": "off",
+  "attribution": {
+    "commit": ""
+  }
 }
