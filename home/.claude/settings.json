@@ -1,4 +1,7 @@
 {
+  "attribution": {
+    "commit": ""
+  },
   "model": "opusplan",
   "hooks": {
     "SessionStart": [
@@ -29,12 +32,10 @@
       }
     }
   },
+  "feedbackDrafts": "off",
   "effortLevel": "high",
   "tui": "fullscreen",
   "theme": "custom:atom-one-night-flat",
   "agentPushNotifEnabled": true,
-  "feedbackDrafts": "off",
-  "attribution": {
-    "commit": ""
-  }
+  "skipDangerousModePermissionPrompt": true
 }
