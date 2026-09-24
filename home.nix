@@ -58,10 +58,11 @@ in
       ".." = "cd ..";
       add = "git add .";
       push = "git push";
+      status = "git status";
       pull = "git pull";
       main = "git switch main";
       develop = "git switch develop";
-      cc = "claude";
+      cc = "claude --dangerously-skip-permissions";
       ls = "eza";
       ll = "eza -la";
       la = "eza -a";
