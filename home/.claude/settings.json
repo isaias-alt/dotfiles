@@ -31,7 +31,6 @@
   },
   "effortLevel": "high",
   "tui": "fullscreen",
-  "skipDangerousModePermissionPrompt": true,
   "theme": "custom:atom-one-night-flat",
   "agentPushNotifEnabled": true,
   "feedbackDrafts": "off",

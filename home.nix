@@ -62,7 +62,7 @@ in
       pull = "git pull";
       main = "git switch main";
       develop = "git switch develop";
-      cc = "claude --dangerously-skip-permissions";
+      cc = "claude";
       ls = "eza";
       ll = "eza -la";
       la = "eza -a";
