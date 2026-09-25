@@ -20,5 +20,6 @@ return {
   },
   keys = {
     { '<leader>i', function() Snacks.image.hover() end, desc = 'Preview Image Under Cursor' },
+    { '<leader>p', '<cmd>Obsidian paste_img<cr>', desc = 'Paste Image from Clipboard' },
   },
 }

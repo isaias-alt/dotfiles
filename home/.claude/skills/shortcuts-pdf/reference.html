@@ -91,7 +91,7 @@
 <body>
 
 <h1>Atajos de teclado</h1>
-<p class="subtitle">Generado el 14 de septiembre de 2026 &middot; custom leído desde ~/.dotfiles, defaults verificados contra el código fuente instalado &middot; leader key de Neovim: <kbd>Espacio</kbd></p>
+<p class="subtitle">Generado el 25 de septiembre de 2026 &middot; custom leído desde ~/.dotfiles, defaults verificados contra el código fuente instalado &middot; leader key de Neovim: <kbd>Espacio</kbd></p>
 
 <h2>Vim &mdash; lo básico<span class="tag">default de Neovim</span></h2>
 <div class="cols">
@@ -138,7 +138,7 @@
   <tr><td class="key"><kbd>Ctrl</kbd>+<kbd>a</kbd></td><td>Seleccionar todo</td></tr>
 </table>
 
-<h3>snacks.nvim &mdash; picker / buscador</h3>
+<h3>snacks.nvim &mdash; picker / buscador / imágenes</h3>
 <table>
   <tr><td class="key"><kbd>Espacio</kbd> <kbd>f</kbd></td><td>Buscar archivos</td></tr>
   <tr><td class="key"><kbd>Espacio</kbd> <kbd>s</kbd></td><td>Buscar texto (grep)</td></tr>
@@ -172,6 +172,31 @@
   <tr><td class="key"><kbd>s</kbd> / <kbd>Ctrl</kbd>+<kbd>s</kbd></td><td>Seleccionar/deseleccionar todo</td></tr>
   <tr><td class="key"><kbd>Backspace</kbd></td><td>Con el prompt vacío, sube al directorio padre</td></tr>
 </table>
+</div>
+</div>
+
+<h3>obsidian.nvim &mdash; notas (vault Ideaverse)</h3>
+<div class="cols">
+<div>
+<p class="note" style="margin:0 0 3pt 0;">Atajos propios</p>
+<table>
+  <tr><td class="key"><kbd>Espacio</kbd> <kbd>i</kbd></td><td>Previsualizar imagen bajo el cursor (custom, snacks.image)</td></tr>
+  <tr><td class="key"><kbd>Espacio</kbd> <kbd>p</kbd></td><td>Pegar imagen del portapapeles en la nota</td></tr>
+</table>
+<p class="note" style="margin:6pt 0 3pt 0;">Defaults del plugin, solo en buffers markdown dentro del vault</p>
+<table>
+  <tr><td class="key"><kbd>Enter</kbd></td><td>Smart action: sigue link / muestra notas con el tag / toggle checkbox / fold del heading</td></tr>
+  <tr><td class="key"><kbd>]</kbd><kbd>o</kbd> / <kbd>[</kbd><kbd>o</kbd></td><td>Ir al link siguiente / anterior en el buffer</td></tr>
+</table>
+</div>
+<div>
+<p class="note" style="margin:0 0 3pt 0;">LSP en notas (registrado por obsidian.nvim) <span class="tag">default de Neovim</span></p>
+<table>
+  <tr><td class="key"><kbd>gr</kbd><kbd>a</kbd></td><td>Code actions de la nota (rename, template, etc.)</td></tr>
+  <tr><td class="key"><kbd>gr</kbd><kbd>n</kbd></td><td>Renombrar nota y actualizar backlinks</td></tr>
+  <tr><td class="key"><kbd>gr</kbd><kbd>r</kbd></td><td>Backlinks de la nota actual en quickfix</td></tr>
+</table>
+<p class="empty-note" style="padding:3pt 0 0 0;">Comando de entrada: <code>:Obsidian</code> (Tab para completar subcomandos) &mdash; <code>new</code>, <code>today</code>, <code>search</code>, <code>quick_switch</code>, <code>template</code>, <code>paste_img</code>, etc.</p>
 </div>
 </div>
 
@@ -214,7 +239,6 @@
   <tr><td class="key"><kbd>prefix</kbd> <kbd>w</kbd></td><td>Selector de workspaces</td></tr>
   <tr><td class="key"><kbd>prefix</kbd> <kbd>[</kbd></td><td>Workspace anterior</td></tr>
   <tr><td class="key"><kbd>prefix</kbd> <kbd>]</kbd></td><td>Workspace siguiente</td></tr>
-  <tr><td class="key"><kbd>prefix</kbd> <kbd>Shift</kbd>+<kbd>D</kbd></td><td>Cerrar workspace</td></tr>
 </table>
 <h3>Otros</h3>
 <table>
