@@ -27,6 +27,7 @@ local servers = {
   'jsonls',     -- json, jsonc
   'lua_ls',     -- lua
   'marksman',   -- markdown
+  'mdx_analyzer', -- mdx
   'taplo',      -- toml
   'ts_ls',      -- javascript(react), typescript(react)
   'yamlls',     -- yaml

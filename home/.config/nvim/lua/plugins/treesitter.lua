@@ -10,6 +10,7 @@ local filetypes = {
   'jsonc',
   'lua',
   'markdown',
+  'mdx',
   'toml',
   'typescript',
   'typescriptreact',
@@ -29,6 +30,7 @@ local parsers = {
   'lua',
   'markdown',
   'markdown_inline',
+  'mdx',
   'toml',
   'tsx',
   'typescript',
@@ -57,4 +59,10 @@ return {
       })
     end,
   },
+
+  vim.filetype.add({
+    extension = {
+      mdx = 'mdx',
+    },
+  })
 }
