@@ -2,3 +2,5 @@ home/.config/herdr/session.json
 home/.config/herdr/*.log
 home/.config/herdr/*.sock
 home/.claude/skills/synced/
+home/.config/herdr/herdr.sock.*
+home/.config/herdr/session-snapshots
