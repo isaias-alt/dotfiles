@@ -67,6 +67,17 @@ return {
         },
       })
       require('telescope').load_extension('file_browser')
+
+      -- relative numbers in the results list so `5j` jumps between entries
+      vim.api.nvim_create_autocmd('FileType', {
+        pattern = 'TelescopeResults',
+        callback = function(args)
+          for _, win in ipairs(vim.fn.win_findbuf(args.buf)) do
+            vim.wo[win].number = true
+            vim.wo[win].relativenumber = true
+          end
+        end,
+      })
     end,
   },
 }

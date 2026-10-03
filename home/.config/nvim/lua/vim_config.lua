@@ -9,3 +9,5 @@ o.smartcase = true             -- case-sensitive only if i type a capital
 o.clipboard = 'unnamedplus'    -- share the system clipboard
 o.scrolloff = 16               -- keep cursor away from the screen edge
 o.undofile = true              -- persistent undo across sessions
+-- netrw (`nvim .`) hides line numbers by default; keep them so `5j` jumps work
+vim.g.netrw_bufsettings = 'noma nomod nu rnu nobl nowrap ro'
