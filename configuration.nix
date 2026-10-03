@@ -47,6 +47,7 @@
       "gh"
       "git"
       "goreleaser"
+      "gemini-cli"
       "imagemagick"
       "node"
       "pnpm"
