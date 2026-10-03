@@ -91,7 +91,7 @@
 <body>
 
 <h1>Atajos de teclado</h1>
-<p class="subtitle">Generado el 25 de septiembre de 2026 &middot; custom leído desde ~/.dotfiles, defaults verificados contra el código fuente instalado &middot; leader key de Neovim: <kbd>Espacio</kbd></p>
+<p class="subtitle">Generado el 3 de octubre de 2026 &middot; custom leído desde ~/.dotfiles, defaults verificados contra el código fuente instalado &middot; leader key de Neovim: <kbd>Espacio</kbd></p>
 
 <h2>Vim &mdash; lo básico<span class="tag">default de Neovim</span></h2>
 <div class="cols">
@@ -117,6 +117,8 @@
   <tr><td class="key"><kbd>V</kbd></td><td>Selección visual por línea</td></tr>
   <tr><td class="key"><kbd>Ctrl</kbd>+<kbd>v</kbd></td><td>Selección visual en bloque</td></tr>
   <tr><td class="key"><kbd>Ctrl</kbd>+<kbd>a</kbd></td><td>Seleccionar todo el archivo (custom, keys.lua)</td></tr>
+  <tr><td class="key"><kbd>viw</kbd> / <kbd>vip</kbd></td><td>Seleccionar la palabra / el párrafo bajo el cursor</td></tr>
+  <tr><td class="key"><kbd>vi"</kbd> <kbd>vi(</kbd> <kbd>vi{</kbd> <kbd>vit</kbd></td><td>Seleccionar lo de dentro de comillas / paréntesis / llaves / etiqueta (<kbd>a</kbd> en vez de <kbd>i</kbd> incluye los delimitadores)</td></tr>
   <tr><td class="key"><kbd>x</kbd></td><td>Borrar el carácter bajo el cursor</td></tr>
   <tr><td class="key"><kbd>dd</kbd></td><td>Borrar la línea actual</td></tr>
   <tr><td class="key"><kbd>dw</kbd></td><td>Borrar la palabra actual</td></tr>
@@ -145,6 +147,50 @@
   <tr><td class="key"><kbd>Espacio</kbd> <kbd>b</kbd></td><td>Listar buffers</td></tr>
   <tr><td class="key"><kbd>g</kbd> <kbd>d</kbd></td><td>Ir a la definición</td></tr>
 </table>
+
+<h3>LSP &mdash; errores, fixes y definiciones <span class="tag">default de Neovim</span></h3>
+<div class="cols">
+<div>
+<table>
+  <tr><td class="key"><kbd>K</kbd></td><td>Hover: documentación del símbolo (con LSP activo)</td></tr>
+  <tr><td class="key"><kbd>gr</kbd><kbd>a</kbd></td><td>Code actions / quick fix del error bajo el cursor</td></tr>
+  <tr><td class="key"><kbd>gr</kbd><kbd>n</kbd></td><td>Renombrar símbolo</td></tr>
+  <tr><td class="key"><kbd>gr</kbd><kbd>r</kbd></td><td>Referencias</td></tr>
+  <tr><td class="key"><kbd>gr</kbd><kbd>i</kbd></td><td>Implementación</td></tr>
+  <tr><td class="key"><kbd>gr</kbd><kbd>t</kbd></td><td>Definición del tipo</td></tr>
+</table>
+</div>
+<div>
+<table>
+  <tr><td class="key"><kbd>Ctrl</kbd>+<kbd>w</kbd> <kbd>d</kbd></td><td>Mensaje completo del error bajo el cursor</td></tr>
+  <tr><td class="key"><kbd>]</kbd><kbd>d</kbd> / <kbd>[</kbd><kbd>d</kbd></td><td>Siguiente / anterior diagnóstico</td></tr>
+  <tr><td class="key"><kbd>g</kbd><kbd>O</kbd></td><td>Símbolos del documento</td></tr>
+  <tr><td class="key"><kbd>Ctrl</kbd>+<kbd>s</kbd></td><td>Ayuda de firma de la función, en modo insertar</td></tr>
+</table>
+</div>
+</div>
+
+<h3>blink.cmp &mdash; autocompletado <span class="tag">preset enter</span></h3>
+<div class="cols">
+<div>
+<table>
+  <tr><td class="key"><kbd>Enter</kbd></td><td>Aceptar la sugerencia</td></tr>
+  <tr><td class="key"><kbd>Ctrl</kbd>+<kbd>n</kbd> / <kbd>Ctrl</kbd>+<kbd>p</kbd></td><td>Siguiente / anterior sugerencia (también flechas)</td></tr>
+  <tr><td class="key"><kbd>Ctrl</kbd>+<kbd>Espacio</kbd></td><td>Mostrar el menú / la documentación</td></tr>
+  <tr><td class="key"><kbd>Ctrl</kbd>+<kbd>e</kbd></td><td>Cerrar el menú</td></tr>
+</table>
+</div>
+<div>
+<table>
+  <tr><td class="key"><kbd>Tab</kbd> / <kbd>Shift</kbd>+<kbd>Tab</kbd></td><td>Saltar al siguiente / anterior campo de un snippet</td></tr>
+  <tr><td class="key"><kbd>Ctrl</kbd>+<kbd>b</kbd> / <kbd>Ctrl</kbd>+<kbd>f</kbd></td><td>Scroll de la documentación arriba / abajo</td></tr>
+  <tr><td class="key"><kbd>Ctrl</kbd>+<kbd>k</kbd></td><td>Mostrar la firma de la función</td></tr>
+</table>
+</div>
+</div>
+
+<h3>nvim-autopairs, nvim-ts-autotag, smear-cursor.nvim</h3>
+<p class="empty-note">Sin atajos: autopairs cierra <code>( [ { ' "</code>, autotag cierra y renombra etiquetas HTML/JSX (<code>&lt;div&gt;</code> &rarr; <code>&lt;/div&gt;</code>), y smear-cursor anima una estela cuando el cursor salta.</p>
 
 <h3>telescope-file-browser.nvim &mdash; explorador de archivos <span class="tag">defaults del plugin</span></h3>
 <p class="note" style="margin:0 0 4pt 0;">Abrir con <kbd>Espacio</kbd> <kbd>e</kbd> (custom) &mdash; arranca directo en modo normal. Un solo modo abajo: letra sola en normal, <kbd>Alt</kbd>+letra si estás escribiendo en el prompt (insert).</p>
