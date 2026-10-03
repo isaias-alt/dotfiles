@@ -10,6 +10,7 @@ local filetypes = {
   'jsonc',
   'lua',
   'markdown',
+  'mdx',
   'toml',
   'typescript',
   'typescriptreact',
@@ -48,6 +49,10 @@ return {
 
       -- jsonc has no separate parser; reuse the json grammar for it
       vim.treesitter.language.register('json', 'jsonc')
+
+      -- same for mdx: detect the extension and reuse the markdown grammar
+      vim.filetype.add({ extension = { mdx = 'mdx' } })
+      vim.treesitter.language.register('markdown', 'mdx')
 
       vim.api.nvim_create_autocmd('FileType', {
         pattern = filetypes,
