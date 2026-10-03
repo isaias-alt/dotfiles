@@ -1,12 +1,14 @@
-{ config, pkgs, ... }:
+{ config, pkgs, user, ... }:
 
 let
-  dotfiles = "${config.home.homeDirectory}/.dotfiles";
+  username = "macuser";
+  homeDir = "/Users/lucascodev";
+  dotfiles = "${homeDir}/.dotfiles";
 in
 
 {
-  home.username = "macuser";
-  home.homeDirectory = "/Users/macuser";
+  home.username = username;
+  home.homeDirectory = homeDir;
   home.stateVersion = "24.11";
   home.packages = with pkgs; [
     # cli i use constantly

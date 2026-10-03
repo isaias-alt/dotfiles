@@ -7,9 +7,9 @@
   nixpkgs.config.allowUnfree = true;
   nixpkgs.hostPlatform = "aarch64-darwin";
 
-  system.primaryUser = "macuser";
+  system.primaryUser = "lucascodev";
   users.users.macuser = {
-    home = "/Users/macuser";
+    home = "/Users/lucascodev";
   };
   system.stateVersion = 6;
   system.defaults = {
@@ -27,7 +27,7 @@
   };
   nix-homebrew = {
     enable = true;
-    user = "macuser";
+    user = "lucascodev";
     autoMigrate = true;
   };
   homebrew = {
