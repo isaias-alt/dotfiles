@@ -30,7 +30,10 @@ in
     CLAUDE_CODE_AUTO_COMPACT_WINDOW = "500000"; # compact at a fixed 500k tokens instead of Claude Code's per-model default
     CLAUDE_CODE_DISABLE_FEEDBACK_SURVEY = "1";
   };
-  home.sessionPath = [ "${config.home.homeDirectory}/flutter/bin" ];
+  home.sessionPath = [
+    "${config.home.homeDirectory}/flutter/bin"
+    "${config.home.homeDirectory}/.local/bin"
+  ];
 
   programs.zoxide.enable = true;
 
