@@ -9,4 +9,8 @@ return {
     event = 'VeryLazy',
     opts = {},  -- animated trail when the cursor jumps
   },
+  {
+    'sitiom/nvim-numbertoggle',
+    event = 'VeryLazy',  -- absolute numbers in insert mode / unfocused windows, relative otherwise
+  },
 }
