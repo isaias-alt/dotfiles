@@ -66,6 +66,7 @@
       "wezterm"
       "claude-code"
       "font-meslo-lg-nerd-font"
+      "opensuperwhisper"
       "postman"
       "temurin@21"
       "visual-studio-code"
