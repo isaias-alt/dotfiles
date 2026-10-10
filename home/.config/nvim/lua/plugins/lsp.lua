@@ -33,6 +33,11 @@ local servers = {
   'yamlls',     -- yaml
 }
 
+-- include files behind the `eval` build tag (vexillum internal/tribunal/eval_test.go)
+vim.lsp.config('gopls', {
+  settings = { gopls = { buildFlags = { '-tags=eval' } } },
+})
+
 return {
   { 'mason-org/mason.nvim', opts = {} },
   {
