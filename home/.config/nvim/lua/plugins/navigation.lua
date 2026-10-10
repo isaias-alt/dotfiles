@@ -16,7 +16,6 @@ return {
       picker = { enabled = true },
       notifier = { enabled = true },
       input = { enabled = true },
-      image = { enabled = true },
       dashboard = {
         enabled = true,
         preset = {

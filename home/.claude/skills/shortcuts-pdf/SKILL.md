@@ -18,6 +18,8 @@ time; only the table rows change based on what the config actually contains.
 
 - `home/.config/nvim/lua/vim_config.lua` — grep `vim.g.mapleader` for the leader key.
 - `home/.config/nvim/lua/keys.lua` — every `vim.keymap.set(...)` call, using its `desc` for the label.
+- `home/.config/nvim/lua/plugins/*.lua` — also grep each file for top-level `vim.keymap.set(...)`
+  (e.g. `lsp.lua` declares the code-action bind outside any `keys` table).
 - `home/.config/nvim/lua/plugins/*.lua` — glob **all** files in this directory (new plugins add new
   files here). For each plugin table that has an explicit `keys = { ... }`, list those binds under
   that plugin's own section, using each entry's `desc`.

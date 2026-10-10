@@ -1,0 +1,8 @@
+{
+  "name": "Solarized Osaka",
+  "base": "dark",
+  "overrides": {
+    "userMessageBackground": "#001419",
+    "suggestion": "#268bd3"
+  }
+}

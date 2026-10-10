@@ -1,0 +1,8 @@
+{
+  "name": "Tokyonight",
+  "base": "dark",
+  "overrides": {
+    "userMessageBackground": "#1a1b26",
+    "suggestion": "#7aa2f7"
+  }
+}

@@ -6,6 +6,10 @@ onboarding = false
 # auditioning in wezterm.lua.
 name = "terminal"
 
+[theme.custom]
+# Trial: pin the dark color herdr was getting from ANSI 8 before it was lightened for zsh ghost text.
+surface_dim = "#001419"
+
 [keys]
 prefix = "ctrl+b"
 focus_pane_left  = "prefix+h"
