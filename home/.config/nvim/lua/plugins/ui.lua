@@ -7,7 +7,9 @@ return {
   {
     'sphamba/smear-cursor.nvim',
     event = 'VeryLazy',
-    opts = {},  -- animated trail when the cursor jumps
+    opts = {  -- animated trail when the cursor jumps
+      delay_event_to_smear = 50,  -- ms; default 1 draws the trail before the cursor position settles, causing upward flicks while typing
+    },
   },
   {
     'sitiom/nvim-numbertoggle',
