@@ -35,7 +35,9 @@
     onActivation.cleanup = "zap";  # remove anything not listed here
     onActivation.autoUpdate = true;
     onActivation.extraFlags = [ "--force" ];
+    taps = [ "isaias-alt/tap" ];  # vexillum's tap (repo isaias-alt/homebrew-tap)
     brews = [
+      "isaias-alt/tap/vexillum"  # stable vx; dev builds install as vx-dev (see home.nix)
       "herdr"
       "bash"
       "colima"

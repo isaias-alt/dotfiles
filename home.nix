@@ -68,6 +68,7 @@ in
       main = "git switch main";
       develop = "git switch develop";
       cc = "claude";
+      vx-dev = "$HOME/.local/bin/vx-dev"; # dev build of vexillum (scripts/install-local.sh); vx is the brew stable one
       ls = "eza";
       ll = "eza -la";
       la = "eza -a";
