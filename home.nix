@@ -88,15 +88,15 @@ in
     settings = {
       add_newline = false;
       format = "$directory$git_branch$git_status$cmd_duration$line_break$character";
-      # Colors match the solarized-osaka palette (same theme as nvim/wezterm/herdr).
-      directory.style = "bold #268bd3";
-      git_branch.style = "bold #d23681";
-      git_status.style = "#b28500";
+      # Colors match the atom-one-night-flat palette (same theme as nvim/wezterm/herdr).
+      directory.style = "bold #4aa5f0";
+      git_branch.style = "bold #c162de";
+      git_status.style = "#d18f52";
       character = {
-        success_symbol = "[❯](bold #849900)";
+        success_symbol = "[❯](bold #8cc265)";
         error_symbol = "[❯](bold #e05561)";
       };
-      cmd_duration.format = "[$duration](#b28500) ";
+      cmd_duration.format = "[$duration](#d18f52) ";
     };
   };
 

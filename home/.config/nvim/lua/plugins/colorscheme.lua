@@ -1,7 +1,8 @@
 return {
   {
     'isaias-alt/atom-one.nvim',
-    lazy = true,
+    lazy = false,
+    priority = 1000,
     config = function()
       vim.cmd.colorscheme('atom-one-night-flat')
 
@@ -26,15 +27,13 @@ return {
   },
   {
     'craftzdog/solarized-osaka.nvim',
-    lazy = false,
-    priority = 1000,
+    lazy = true,
     config = function()
       require('solarized-osaka').setup({
         -- Let WezTerm's own background show through (see wezterm.lua's
         -- text_background_opacity comment).
         transparent = true,
       })
-      vim.cmd.colorscheme('solarized-osaka')
     end,
   },
   {

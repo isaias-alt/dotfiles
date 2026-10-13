@@ -46,7 +46,7 @@
   "effortLevel": "high",
   "tui": "fullscreen",
   "skipDangerousModePermissionPrompt": true,
-  "theme": "custom:solarized-osaka",
+  "theme": "custom:atom-one-night-flat",
   "agentPushNotifEnabled": true,
   "autoMode": {
     "environment": [

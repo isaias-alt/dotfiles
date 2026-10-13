@@ -91,7 +91,7 @@
 <body>
 
 <h1>Atajos de teclado</h1>
-<p class="subtitle">Generado el 10 de octubre de 2026 &middot; custom leído desde ~/.dotfiles, defaults verificados contra el código fuente instalado &middot; leader key de Neovim: <kbd>Espacio</kbd></p>
+<p class="subtitle">Generado el 12 de octubre de 2026 &middot; custom leído desde ~/.dotfiles, defaults verificados contra el código fuente instalado &middot; leader key de Neovim: <kbd>Espacio</kbd></p>
 
 <h2>Vim &mdash; lo básico<span class="tag">default de Neovim</span></h2>
 <div class="cols">
@@ -138,6 +138,7 @@
 <h3>Atajos propios (keys.lua)</h3>
 <table>
   <tr><td class="key"><kbd>Ctrl</kbd>+<kbd>a</kbd></td><td>Seleccionar todo</td></tr>
+  <tr><td class="key"><kbd>Option</kbd>+<kbd>&larr;</kbd> / <kbd>Option</kbd>+<kbd>&rarr;</kbd></td><td>Palabra anterior / siguiente, en modo insertar</td></tr>
 </table>
 
 <h3>snacks.nvim &mdash; picker / buscador</h3>
@@ -191,7 +192,7 @@
 </div>
 
 <h3>nvim-autopairs, nvim-ts-autotag, smear-cursor.nvim</h3>
-<p class="empty-note">Sin atajos: autopairs cierra <code>( [ { ' "</code>, autotag cierra y renombra etiquetas HTML/JSX (<code>&lt;div&gt;</code> &rarr; <code>&lt;/div&gt;</code>), y smear-cursor anima una estela cuando el cursor salta.</p>
+<p class="empty-note">Sin atajos: autopairs cierra <code>( [ { ' "</code>, autotag cierra y renombra etiquetas HTML/JSX (<code>&lt;div&gt;</code> &rarr; <code>&lt;/div&gt;</code>), y smear-cursor anima una estela cuando el cursor salta (desactivada en modo insertar, donde causaba saltos hacia arriba al escribir).</p>
 
 <h3>telescope-file-browser.nvim &mdash; explorador de archivos <span class="tag">defaults del plugin</span></h3>
 <p class="note" style="margin:0 0 4pt 0;">Abrir con <kbd>Espacio</kbd> <kbd>e</kbd> (custom) &mdash; arranca directo en modo normal. Un solo modo abajo: letra sola en normal, <kbd>Alt</kbd>+letra si estás escribiendo en el prompt (insert).</p>
