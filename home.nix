@@ -29,10 +29,12 @@ in
     EDITOR = "nvim";
     CLAUDE_CODE_AUTO_COMPACT_WINDOW = "500000"; # compact at a fixed 500k tokens instead of Claude Code's per-model default
     CLAUDE_CODE_DISABLE_FEEDBACK_SURVEY = "1";
+    PNPM_HOME = "${config.home.homeDirectory}/Library/pnpm"; # pnpm global store root
   };
   home.sessionPath = [
     "${config.home.homeDirectory}/flutter/bin"
     "${config.home.homeDirectory}/.local/bin"
+    "${config.home.homeDirectory}/Library/pnpm/bin" # pnpm global bins
   ];
 
   programs.zoxide.enable = true;

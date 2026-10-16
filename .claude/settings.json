@@ -3,5 +3,28 @@
     "commit": "",
     "pr": ""
   },
-  "includeGitInstructions": false
+  "includeGitInstructions": false,
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Write|Edit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash \"$CLAUDE_PROJECT_DIR/.claude/hooks/binnacle.sh\" mark"
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash \"$CLAUDE_PROJECT_DIR/.claude/hooks/binnacle.sh\" check"
+          }
+        ]
+      }
+    ]
+  }
 }
