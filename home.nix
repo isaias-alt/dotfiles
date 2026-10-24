@@ -53,7 +53,7 @@ in
     enable = true;
     profileExtra = ''
       eval "$(/opt/homebrew/bin/brew shellenv)"
-      export PATH="$HOME/.no-mistakes/bin:$PATH"
+      export PATH="/usr/local/share/dotnet:$PATH"
     '';
     autosuggestion.enable = true; # ghost text from history
     syntaxHighlighting.enable = true; # commands turn green when valid
