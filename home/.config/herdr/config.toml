@@ -19,6 +19,7 @@ close_tab = "prefix+shift+x"
 workspace_picker = "prefix+w"
 previous_workspace = "prefix+["
 next_workspace      = "prefix+]"
+switch_workspace = "prefix+shift+1..9"  # indexed: prefix+shift+N jumps straight to workspace N
 previous_agent = "prefix+comma"
 next_agent      = "prefix+period"
 goto             = "prefix+g"
