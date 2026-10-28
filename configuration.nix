@@ -59,6 +59,7 @@
       "pure"
       "shfmt"
       "tree-sitter-cli"
+      "trivy"
       "zoxide"
       "zsh-autosuggestions"
       "zsh-syntax-highlighting"
