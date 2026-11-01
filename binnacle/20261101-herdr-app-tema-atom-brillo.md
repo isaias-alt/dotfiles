@@ -21,6 +21,12 @@
 - La doc de `herdr.dev` (`configuration.mdx`) describe el TUI (`[theme] name = "terminal"`), no la app. La referencia correcta para la app es `herdrdev/herdr-app`, en `defaults/AGENTS.md` (copia local en `~/.config/herdr-app/AGENTS.md`).
 - `foreground = #e6e6e6` (valor heredado de septiembre): demasiado parejo, quitaba jerarquía visual.
 
+## Cierre de la sesión
+
+- Commit `2fda6b3` subido a `main` con el tema de herdr app, el enlace en `home.nix`, el tema de Claude Code y esta entrada.
+- Confirmado por el usuario: la intensidad bajó (queda `foreground #c0c4cc`, `inactive #6b7280`); el tamaño de fuente 15 está bien; el grosor mejoró poco.
+- El usuario planea usar solo vx pronto. Se guardó una nota en memoria sobre la migración a la app de herdr.
+
 ## Sin resolver
 
 - El texto de los mensajes del usuario sale en blanco puro (`#ffffff`, color explícito de Claude Code), así que con el `foreground` más bajo resalta más. Posible prueba: override del token `text` en `home/.claude/themes/atom-one-night-flat.json` (no probado).
