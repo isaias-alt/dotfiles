@@ -108,6 +108,9 @@ in
     config.lib.file.mkOutOfStoreSymlink "${dotfiles}/home/.config/nvim";
   home.file.".config/herdr".source =
     config.lib.file.mkOutOfStoreSymlink "${dotfiles}/home/.config/herdr";
+  # Per-file, not the whole dir: herdr-app owns ~/.config/herdr-app and rewrites most of it on start.
+  home.file.".config/herdr-app/themes/atom-one-night-flat.json".source =
+    config.lib.file.mkOutOfStoreSymlink "${dotfiles}/home/.config/herdr-app/themes/atom-one-night-flat.json";
   home.file.".claude/settings.json".source =
     config.lib.file.mkOutOfStoreSymlink "${dotfiles}/home/.claude/settings.json";
   home.file.".claude/CLAUDE.md".source =

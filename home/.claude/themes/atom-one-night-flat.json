@@ -2,7 +2,11 @@
   "name": "Atom One Night Flat",
   "base": "dark",
   "overrides": {
-    "userMessageBackground": "#16191d",
-    "suggestion": "#4aa5f0"
+    "userMessageBackground": "#222730",
+    "suggestion": "#4aa5f0",
+    "text": "#cdd1d8",
+    "inactive": "#6b7280",
+    "inactiveShimmer": "#868d9a",
+    "subtle": "#4b5160"
   }
 }
