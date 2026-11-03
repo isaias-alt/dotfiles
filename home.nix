@@ -20,6 +20,7 @@ in
     neovim
     go # official Go toolchain
     delta # side-by-side diffs for lazygit
+    lazydocker # docker TUI (talks to the colima daemon)
     # the font everything renders in
     nerd-fonts.jetbrains-mono
   ];
