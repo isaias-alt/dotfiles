@@ -71,6 +71,7 @@ in
       main = "git switch main";
       develop = "git switch develop";
       cc = "claude";
+      oc = "opencode";
       ls = "eza";
       ll = "eza -la";
       la = "eza -a";
