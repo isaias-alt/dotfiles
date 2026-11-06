@@ -4,3 +4,4 @@ home/.config/herdr/*.sock
 home/.claude/skills/synced/
 home/.config/herdr/herdr.sock.*
 home/.config/herdr/session-snapshots
+.DS_Store
