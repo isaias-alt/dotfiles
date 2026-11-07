@@ -38,6 +38,7 @@
     taps = [ "isaias-alt/tap" ];  # vexillum's tap (repo isaias-alt/homebrew-tap)
     brews = [
       "isaias-alt/tap/vexillum"
+      "gentleman-programming/tap/gentle-ai"
       "herdr"
       "bash"
       "colima"
