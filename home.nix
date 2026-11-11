@@ -91,15 +91,15 @@ in
     settings = {
       add_newline = false;
       format = "$directory$git_branch$git_status$cmd_duration$line_break$character";
-      # Colors match the atom-one-night-flat palette (same theme as nvim/wezterm/herdr).
-      directory.style = "bold #4aa5f0";
-      git_branch.style = "bold #c162de";
-      git_status.style = "#d18f52";
+      # Colors match the Catppuccin Macchiato palette (same theme as nvim/wezterm/herdr).
+      directory.style = "bold #8aadf4";
+      git_branch.style = "bold #c6a0f6";
+      git_status.style = "#f5a97f";
       character = {
-        success_symbol = "[❯](bold #8cc265)";
-        error_symbol = "[❯](bold #e05561)";
+        success_symbol = "[❯](bold #a6da95)";
+        error_symbol = "[❯](bold #ed8796)";
       };
-      cmd_duration.format = "[$duration](#d18f52) ";
+      cmd_duration.format = "[$duration](#f5a97f) ";
     };
   };
 
@@ -112,6 +112,8 @@ in
   # Per-file, not the whole dir: herdr-app owns ~/.config/herdr-app and rewrites most of it on start.
   home.file.".config/herdr-app/themes/atom-one-night-flat.json".source =
     config.lib.file.mkOutOfStoreSymlink "${dotfiles}/home/.config/herdr-app/themes/atom-one-night-flat.json";
+  home.file.".config/herdr-app/themes/catppuccin-macchiato.json".source =
+    config.lib.file.mkOutOfStoreSymlink "${dotfiles}/home/.config/herdr-app/themes/catppuccin-macchiato.json";
   home.file.".claude/settings.json".source =
     config.lib.file.mkOutOfStoreSymlink "${dotfiles}/home/.claude/settings.json";
   home.file.".claude/CLAUDE.md".source =
