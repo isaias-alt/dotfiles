@@ -5,20 +5,20 @@ local config = wezterm.config_builder()
 config.color_scheme = "Atom One Night Flat"
 config.font = wezterm.font("JetBrainsMono Nerd Font")
 config.font_size = 16.0
-config.window_background_opacity = 0.9
+config.window_background_opacity = 1.0
 -- text_background_opacity intentionally left unset (defaults to 1.0/opaque):
 -- herdr's tabs and other app-painted backgrounds need full opacity to read
 -- well. This used to double-blend with nvim's own painted background into a
 -- visible opacity mismatch (TODO item 1) - fixed at the source instead, in
 -- nvim's colorscheme config (Normal/SignColumn/etc set to bg=none), so nvim
 -- no longer paints an explicit background for this to compound with.
-config.macos_window_background_blur = 60
+config.macos_window_background_blur = 0
 config.hide_tab_bar_if_only_one_tab = true
 config.window_decorations = "RESIZE"
 
 -- Dim unfocused windows so the focused one is obvious at a glance.
 local UNFOCUSED_FOREGROUND_TEXT_HSB = { hue = 1.0, saturation = 0.25, brightness = 0.45 }
-local UNFOCUSED_WINDOW_BACKGROUND_OPACITY = 0.62
+local UNFOCUSED_WINDOW_BACKGROUND_OPACITY = 1.0
 
 -- get_config_overrides() hands back a copy, so the current value is never the
 -- same table we last stored; compare the fields instead of the identity.
