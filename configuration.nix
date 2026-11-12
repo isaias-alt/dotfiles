@@ -39,6 +39,7 @@
     brews = [
       "isaias-alt/tap/vexillum"
       "gentleman-programming/tap/gentle-ai"
+      "gentleman-programming/tap/engram"
       "herdr"
       "bash"
       "colima"

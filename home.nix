@@ -91,15 +91,15 @@ in
     settings = {
       add_newline = false;
       format = "$directory$git_branch$git_status$cmd_duration$line_break$character";
-      # Colors match the Catppuccin Macchiato palette (same theme as nvim/wezterm/herdr).
-      directory.style = "bold #8aadf4";
-      git_branch.style = "bold #c6a0f6";
-      git_status.style = "#f5a97f";
+      # Colors match the Solarized Osaka palette (same theme as nvim/wezterm/herdr).
+      directory.style = "bold #268bd3";
+      git_branch.style = "bold #d23681";
+      git_status.style = "#b28500";
       character = {
-        success_symbol = "[❯](bold #a6da95)";
-        error_symbol = "[❯](bold #ed8796)";
+        success_symbol = "[❯](bold #849900)";
+        error_symbol = "[❯](bold #db302d)";
       };
-      cmd_duration.format = "[$duration](#f5a97f) ";
+      cmd_duration.format = "[$duration](#b28500) ";
     };
   };
 
@@ -114,10 +114,11 @@ in
     config.lib.file.mkOutOfStoreSymlink "${dotfiles}/home/.config/herdr-app/themes/atom-one-night-flat.json";
   home.file.".config/herdr-app/themes/catppuccin-macchiato.json".source =
     config.lib.file.mkOutOfStoreSymlink "${dotfiles}/home/.config/herdr-app/themes/catppuccin-macchiato.json";
-  home.file.".claude/settings.json".source =
-    config.lib.file.mkOutOfStoreSymlink "${dotfiles}/home/.claude/settings.json";
-  home.file.".claude/CLAUDE.md".source =
-    config.lib.file.mkOutOfStoreSymlink "${dotfiles}/home/AGENTS.md";
+  home.file.".config/herdr-app/themes/solarized-osaka.json".source =
+    config.lib.file.mkOutOfStoreSymlink "${dotfiles}/home/.config/herdr-app/themes/solarized-osaka.json";
+  # Settings and CLAUDE.md are owned by Claude Code and gentle-ai at runtime
+  # (gentle-ai rewrites them with its hooks and plugins), so home-manager must
+  # not symlink them. Only the static assets stay managed here.
   home.file.".claude/skills".source =
     config.lib.file.mkOutOfStoreSymlink "${dotfiles}/home/.claude/skills";
   home.file.".claude/themes".source =

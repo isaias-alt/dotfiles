@@ -6,6 +6,15 @@ onboarding = false
 # auditioning in wezterm.lua.
 name = "terminal"
 
+[theme.custom]
+# The "terminal" theme leaves panel_bg as Reset, which makes herdr derive the
+# focused tab label from surface_dim (ANSI bright black, #657b83 here). That
+# lands at 1.21:1 contrast against the blue accent, so the tab number is
+# unreadable. Pinning panel_bg to the terminal background makes the label use
+# #001419 on #268bd3 (5.13:1) instead, while looking identical everywhere else
+# because panel_bg already resolves to that same background.
+panel_bg = "#001419"
+
 [keys]
 prefix = "ctrl+b"
 focus_pane_left  = "prefix+h"
