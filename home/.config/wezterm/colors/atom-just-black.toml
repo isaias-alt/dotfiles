@@ -1,0 +1,25 @@
+[metadata]
+name = "Atom Just Black"
+origin_url = "https://github.com/dereckdamphouse/atom-just-black"
+
+# Ground truth: ~/.vscode/extensions/dereckdamphouse.atom-just-black-1.0.6/
+# themes/AtomJustBlackTheme.json (Atom One Dark tokenColors on a #000000 UI).
+[colors]
+foreground = "#abb2bf" # editor.foreground
+background = "#000000" # editor.background
+cursor_bg = "#528bff" # editorCursor.foreground
+cursor_fg = "#000000" # terminalCursor.background
+cursor_border = "#528bff"
+selection_fg = "#abb2bf"
+selection_bg = "#3e4451" # editor.selectionBackground
+scrollbar_thumb = "#272b33" # scrollbarSlider.background #4E566680 composited
+split = "#242323" # sideBar.border (editorGroup.border is #00000030 = invisible)
+compose_cursor = "#e5c07b"
+
+# terminal.ansi* : the extension only pins ansiBlack (#000000, which is
+# unreadable on its own #000000 background) and leaves the other 15 to VS
+# Code's built-in defaults, so the theme has no authoritative terminal
+# palette. These are Atom One Dark's, the same 16 atom-one.nvim writes to
+# g:terminal_color_0..15, so nvim's :terminal, wezterm and herdr agree.
+ansi = ["#3f4451", "#e05561", "#8cc265", "#d18f52", "#4aa5f0", "#c162de", "#42b3c2", "#d7dae0"]
+brights = ["#4f5666", "#ff616e", "#a5e075", "#f0a45d", "#4dc4ff", "#de73ff", "#4cd1e0", "#e6e6e6"]

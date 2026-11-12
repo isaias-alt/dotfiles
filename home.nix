@@ -116,6 +116,13 @@ in
     config.lib.file.mkOutOfStoreSymlink "${dotfiles}/home/.config/herdr-app/themes/catppuccin-macchiato.json";
   home.file.".config/herdr-app/themes/solarized-osaka.json".source =
     config.lib.file.mkOutOfStoreSymlink "${dotfiles}/home/.config/herdr-app/themes/solarized-osaka.json";
+  home.file.".config/herdr-app/themes/atom-just-black.json".source =
+    config.lib.file.mkOutOfStoreSymlink "${dotfiles}/home/.config/herdr-app/themes/atom-just-black.json";
+  # opencode keeps ~/.config/opencode (opencode.json, cli.json, skills, plugins)
+  # outside home-manager; only the theme file is linked in, so a rebuild never
+  # has to own the rest of that directory.
+  home.file.".config/opencode/themes/atom-just-black.json".source =
+    config.lib.file.mkOutOfStoreSymlink "${dotfiles}/home/.config/opencode/themes/atom-just-black.json";
   # Settings and CLAUDE.md are owned by Claude Code and gentle-ai at runtime
   # (gentle-ai rewrites them with its hooks and plugins), so home-manager must
   # not symlink them. Only the static assets stay managed here.

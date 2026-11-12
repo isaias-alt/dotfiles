@@ -1,19 +1,34 @@
 onboarding = false
 
 [theme]
-# Follow WezTerm's active color_scheme instead of a fixed built-in theme,
-# so herdr's own chrome (status bar, borders, tabs) matches whatever we're
-# auditioning in wezterm.lua.
+# "terminal" keeps herdr's fallback palette anchored to the host terminal's
+# ANSI colors. The explicit pins below then take over the chrome with the exact
+# Atom Just Black UI values, so herdr keeps the Atom Just Black identity even
+# when wezterm is auditioning a different color_scheme.
 name = "terminal"
 
 [theme.custom]
-# The "terminal" theme leaves panel_bg as Reset, which makes herdr derive the
-# focused tab label from surface_dim (ANSI bright black, #657b83 here). That
-# lands at 1.21:1 contrast against the blue accent, so the tab number is
-# unreadable. Pinning panel_bg to the terminal background makes the label use
-# #001419 on #268bd3 (5.13:1) instead, while looking identical everywhere else
-# because panel_bg already resolves to that same background.
-panel_bg = "#001419"
+# Atom Just Black: values traced to the VS Code theme's `colors.*` keys,
+# same ground truth as ~/.config/wezterm/colors/atom-just-black.toml.
+panel_bg = "#000000" # editor.background (also gives the focused tab label 6.5:1 on the accent)
+sidebar_bg = "#000000" # sideBar.background
+active_row_bg = "#2c313a" # list.activeSelectionBackground
+selection_bg = "#3e4451" # editor.selectionBackground
+surface0 = "#21252b" # notification.background
+surface1 = "#2c313a" # editorSuggestWidget.selectedBackground
+surface_dim = "#181a1f" # editorHoverWidget.border
+overlay0 = "#636d83" # editorLineNumber.foreground
+overlay1 = "#9da5b4" # statusBar.foreground
+text = "#abb2bf" # editor.foreground
+subtext0 = "#7d7d80" # sideBar.foreground
+accent = "#528bff" # editorCursor.foreground
+mauve = "#c678dd" # keyword
+green = "#98c379" # string
+yellow = "#e5c07b" # entity.name.type
+red = "#e06c75" # variable
+blue = "#61afef" # entity.name.function
+teal = "#56b6c2" # support.type
+peach = "#d19a66" # constant.numeric
 
 [keys]
 prefix = "ctrl+b"

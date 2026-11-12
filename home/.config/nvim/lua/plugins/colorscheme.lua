@@ -1,23 +1,33 @@
 return {
   {
-    'craftzdog/solarized-osaka.nvim',
+    'isaias-alt/atom-one.nvim',
     lazy = false,
     priority = 1000,
     config = function()
+      local just_black = require('atom_just_black')
+
+      -- Atom One Dark syntax colors with the Just Black (#000000) UI chrome
+      -- ported from the VS Code extension; see lua/atom_just_black.lua for the
+      -- per-color ground truth.
+      require('atom-one').setup({
+        variant = 'onedark',
+        -- The theme already paints #000000, which is exactly what wezterm has,
+        -- so there is no double-blend to avoid: keep the explicit background.
+        transparent = false,
+        on_colors = just_black.on_colors,
+        on_highlights = just_black.on_highlights,
+      })
+
+      vim.cmd.colorscheme('atom-one')
+    end,
+  },
+  {
+    'craftzdog/solarized-osaka.nvim',
+    lazy = true,
+    config = function()
       require('solarized-osaka').setup({
-        -- Let WezTerm's own background show through instead of nvim painting
-        -- its own solid bg per cell (see wezterm.lua's text_background_opacity
-        -- comment).
         transparent = true,
       })
-      vim.cmd.colorscheme('solarized-osaka')
-
-      -- Keep every common surface transparent even if a plugin paints it later.
-      for _, group in ipairs({ 'Normal', 'NormalNC', 'SignColumn', 'EndOfBuffer', 'LineNr' }) do
-        local hl = vim.api.nvim_get_hl(0, { name = group, link = false })
-        hl.bg = nil
-        vim.api.nvim_set_hl(0, group, hl)
-      end
     end,
   },
   {
