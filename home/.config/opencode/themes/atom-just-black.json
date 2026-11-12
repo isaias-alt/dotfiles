@@ -53,7 +53,7 @@
     "background": {
       "base": "#000000",
       "raised": {
-        "base": "#000000",
+        "base": "#0A0B0E",
         "high": "#21252B",
         "max": "#2C313A"
       },
