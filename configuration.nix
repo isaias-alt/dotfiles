@@ -42,6 +42,7 @@
       "gentleman-programming/tap/engram"
       "herdr"
       "bash"
+      "typst"
       "colima"
       "docker"
       "docker-buildx"
