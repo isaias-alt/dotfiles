@@ -78,6 +78,7 @@
       "visual-studio-code"
       "vorssaint"
       "warp"
+      "antigravity-cli"
     ];
   };
 }
