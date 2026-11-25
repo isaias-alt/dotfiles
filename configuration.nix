@@ -47,7 +47,6 @@
       "docker"
       "docker-buildx"
       "docker-compose"
-      "flyctl"
       "fnm"
       "gh"
       "git"
