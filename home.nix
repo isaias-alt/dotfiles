@@ -1,4 +1,4 @@
-{ config, pkgs, user, ... }:
+{ config, lib, pkgs, user, ... }:
 
 let
   username = "macuser";
@@ -133,6 +133,16 @@ in
   home.file.".pi/agent/extensions".source =
     config.lib.file.mkOutOfStoreSymlink "${dotfiles}/home/.pi/agent/extensions";
   home.file.".pi/agent/AGENTS.md".source =
-    config.lib.file.mkOutOfStoreSymlink "${dotfiles}/home/.pi/agent/AGENTS.md";
+    config.lib.file.mkOutOfStoreSymlink "${dotfiles}/home/AGENTS.md";
+
+  # Propagate home/AGENTS.md into gentle-ai-managed agents using bounded marker
+  # blocks (and an Antigravity always_on rule) instead of symlinks, which
+  # gentle-ai refuses to rewrite.
+  home.activation.syncAgentRules = lib.hm.dag.entryAfter [ "linkGeneration" ] ''
+    if [ -x "${dotfiles}/sync-agents.sh" ]; then
+      run env HOME="${homeDir}" PATH="${pkgs.coreutils}/bin:${pkgs.diffutils}/bin:$PATH" \
+        "${pkgs.bash}/bin/bash" "${dotfiles}/sync-agents.sh"
+    fi
+  '';
 
 }

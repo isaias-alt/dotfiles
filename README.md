@@ -41,9 +41,10 @@ Config reproducible de mi Mac: sistema, Homebrew, shell, terminal, editor y mult
 - **Shell y herramientas de usuario (home-manager)** — `home.nix`:
   - zsh (autosuggestions, syntax highlighting, aliases), zoxide, Starship.
   - WezTerm, Neovim, herdr: config real vive en `home/.config/<app>/`, symlinkeada en vivo (los cambios ahí aplican sin rebuild).
-  - `~/.claude/settings.json` y `~/.claude/CLAUDE.md`: config y reglas globales de Claude Code, también symlinkeadas desde `home/`.
+  - `~/.claude/skills` y `~/.claude/themes`: assets estáticos de Claude Code symlinkeados desde `home/`.
 
-## Reglas para agentes (Claude, etc.)
+## Reglas para agentes (Claude, Antigravity, OpenCode, Codex, Gemini CLI, Pi)
 
-- `home/AGENTS.md`: reglas de comportamiento globales, se cargan en cualquier sesión (vía symlink a `~/.claude/CLAUDE.md`).
+- `home/AGENTS.md`: única fuente de verdad de reglas globales.
+- `./sync-agents.sh`: propaga `home/AGENTS.md` a todos los agentes instalados conviviendo con `gentle-ai` (usa bloques `<!-- dotfiles:global -->` en archivos regulares para no romper `gentle-ai sync`, una regla `always_on` propia en Antigravity y `@./dotfiles-global.md` en Gemini CLI). Corre automáticamente en cada `./rebuild.sh` (vía `home.activation` en `home.nix`) y puede ejecutarse a mano tras editar `home/AGENTS.md`.
 - `AGENTS.md` (acá en la raíz): notas puntuales de este repo, se cargan solo cuando trabajo en este proyecto.

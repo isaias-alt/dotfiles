@@ -14,6 +14,15 @@
   If you see one, even if it is not caused by what you are working on right now, still get it fixed.
 - Before using "dynamic workflows", "ultra code" or any harness feature that immediately spawns a large swarm of subagents, always explain the tradeoffs and ask the user for explicit approval.
 
+## Response style
+
+- Start with the answer, concrete outcome, or next action. Skip preambles ("Great question", "Let me..."), closing pleasantries ("Hope this helps"), and redundant recaps.
+- When work completes, state concretely what now works and how to verify it.
+- On multi-step or multi-turn work, state current progress concisely (or use the harness plan/checklist without duplicating it in prose). When the user must run multiple steps, use a short numbered list and end with one concrete next action if something remains open.
+- Report errors matter-of-factly: observed error, verified cause (or state that the cause is unconfirmed), and fix or next check. Never fabricate a cause to fit the format.
+- Keep responses focused on the main task: do not interleave "by the way" sidebars. If an unrelated issue remains unaddressed, mention it separately in one line at the end.
+- Override brevity when asked to explain or walk through a topic (use scannable headers) or when safety/tradeoffs matter. After 3 failed debugging turns on the same issue, stop editing, name the assumption that may be wrong, and ask one diagnostic question.
+
 ## Maintaining this file
 
 Keep this file for knowledge useful to almost every future agent session in this project.
